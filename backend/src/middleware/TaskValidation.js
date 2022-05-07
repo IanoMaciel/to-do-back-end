@@ -11,7 +11,7 @@ const TaskValidation = async (req, res, next) => {
     } = req.body;
 
     if(!macaddress)
-        return res.status(400).json({error: 'Macaddress é obrigatório'});
+        return res.status(400).json({error: 'MacAddress é obrigatório'});
     else if(!type)
         return res.status(400).json({error: 'Tipo é obrigatório'});
     else if(!title)
@@ -26,13 +26,13 @@ const TaskValidation = async (req, res, next) => {
         let exists;
 
         exists = await TaskModel.findOne({
-            'whe': {'$eq': new Date(when)},
+            'when': {'$eq': new Date(when)},
             'macaddress' : {'$in': macaddress}
         });
 
-        if(exists)
+        if(exists) {
             return res.status(400).json({error: 'Já existe uma tarefa com a mesmo dia e hora'});
-
+        }
         next();
     }
 }
