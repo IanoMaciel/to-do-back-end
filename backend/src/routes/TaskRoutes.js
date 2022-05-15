@@ -12,6 +12,7 @@ router.delete('/:id', TaskController.delete); // rota para deletar uma única ta
 router.put('/:id/:done', TaskController.done); // atualizar os status da tarefa
 router.get('/filter/all', MacAddressValidation, TaskController.listAll); //rota para listar todas as tarefas
 router.get('/filter/late', MacAddressValidation, TaskController.late); // rota para listar todas as tarefas atrasadas
+router.get('/filter/today', MacAddressValidation, TaskController.today); // rota para listar todas as tarefas de hoje "Today"
 
 
 module.exports = router;
