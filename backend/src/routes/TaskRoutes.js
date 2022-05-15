@@ -15,6 +15,7 @@ router.get('/filter/late', MacAddressValidation, TaskController.late); // rota p
 router.get('/filter/today', MacAddressValidation, TaskController.today); // rota para listar todas as tarefas de hoje "Today"
 router.get('/filter/week', MacAddressValidation, TaskController.week); // rota para listar todas as tarefas da semana "Week"
 router.get('/filter/month', MacAddressValidation, TaskController.month); // rota para listar todas as tarefas dos meses "Month"
+router.get('/filter/year', MacAddressValidation, TaskController.year); // rota para listar todas as tarefas do ano "Years"
 
 
 module.exports = router;
