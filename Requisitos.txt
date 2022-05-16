@@ -1,0 +1,3 @@
+- Validação de campo;
+- Validação de data e hora;
+- Não permitir que o usuário cadastre uma nova tarefa no mesmo dia e hora
