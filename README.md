@@ -1,2 +1,2 @@
 # ToDo
-Respositório ao back-end da aplicação To Do
+Respositório destinado ao back-end da aplicação To Do
