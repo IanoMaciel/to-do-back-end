@@ -1,6 +1,8 @@
 const express = require('express');
+const cors = require('cors');
 const server = express(); //inicializa o servidor 
-server.use(express.json())
+server.use(cors());
+server.use(express.json());
 
 const TaskRoutes = require('./routes/TaskRoutes');
 server.use('/task', TaskRoutes);
